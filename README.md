@@ -269,4 +269,4 @@ PROGRAM
     3 right:
 ```
 
-<small>(actually you can pass literally anything second argument to `idc` and it will product debug output)</small>
+<small>(actually you can pass literally anything second argument to `idcInterpreter` and it will product debug output)</small>
