@@ -12,7 +12,7 @@ idc executes `.idc` files by
 
 - **Evaluating** the parse tree
 
-Evaluation occurs in environemnts definied similarly to Scheme-like languages.
+Evaluation occurs in environments definied similarly to Scheme-like languages.
 
 ## Usage
 
