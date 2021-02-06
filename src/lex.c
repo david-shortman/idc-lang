@@ -619,8 +619,6 @@ void displayLexeme(FILE *out, lexeme *l)
         fprintf(out, ": %s\n", l->name);
     else
         fprintf(out, "\n");
-    if (l->name)
-        fprintf(stdout, "%s\n", l->name);
 }
 
 void displayType(FILE *out, lexemeType t)

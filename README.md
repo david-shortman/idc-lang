@@ -229,6 +229,44 @@ black ash
 
 ## Debug
 
-Internal debugging output can be enabled with the `--debug` flag.
+Internal debugging output can be enabled by calling the `idcInterpreter` directly with the `--debug` flag.
 
-<small>(actually you can pass literally anything second argument to `idc` and it will product debug output</small>
+The parse tree will be printed before it is evaluated.
+
+A simple `PROGRAM`:
+
+```
+declare a as 1.
+displayln a.
+```
+
+will be parsed as:
+
+```
+PROGRAM
+1 left: 
+  DECLARE
+  2 left: 
+    VARIABLE: a
+    3 left: 
+    3 right: 
+  2 right: 
+    INTEGER: 1
+    3 left: 
+    3 right: 
+1 right: 
+  NEXT
+  2 left: 
+    DISPLAYLN
+    3 left: 
+      VARIABLE: a
+      4 left: 
+      4 right: 
+    3 right: 
+  2 right: 
+    NEXT
+    3 left: 
+    3 right:
+```
+
+<small>(actually you can pass literally anything second argument to `idc` and it will product debug output)</small>

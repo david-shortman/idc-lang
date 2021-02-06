@@ -414,9 +414,9 @@ void treePrint(lexeme *t, int level, int ind)
     displayLexeme(stdout, t);
     ++level;
     indent(ind);
-    fprintf(stdout, "%d left kiddo: \n", level);
+    fprintf(stdout, "%d left: \n", level);
     treePrint(t->left, level, ind + 2);
     indent(ind);
-    fprintf(stdout, "%d right kiddo: \n", level);
+    fprintf(stdout, "%d right: \n", level);
     treePrint(t->right, level, ind + 2);
 }
