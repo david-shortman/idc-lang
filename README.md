@@ -25,7 +25,7 @@ Evaluation occurs in environments definied similarly to Scheme-like languages.
 
 ### Usage
 
-<small>All code is seen below is in tutorial.idc.</small>
+<small>All code seen below is in tutorial.idc.</small>
 
 #### Comments
 
