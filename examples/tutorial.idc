@@ -153,14 +153,14 @@ displayln delectable.
 
 --10. There's no nil value... but one can make do:
 
-declare cell1 as evaluate cons(1, "nil").
+declare cell1 as evaluate cons(1, null).
 declare cell2 as evaluate cons(3, cell1).
 declare cell3 as evaluate cons(4, cell2).
 
 declare displayList as function(list)
     {
     display evaluate list("car").
-    if evaluate list("cdr") is = "nil" then
+    if evaluate list("cdr") is = null then
         {
         0.
         }

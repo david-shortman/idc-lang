@@ -62,7 +62,7 @@ declare data as function(node)
 
 declare height as function(node)
     {
-    if node is = "nil" or node is = 0 then
+    if node is = null or node is = 0 then
         {
         0.
         }
@@ -104,9 +104,9 @@ declare keyAndValue! as function(node, newKey, newValue)
 
 declare find as function(e, t)
     {
-    if t is = "nil" then
+    if t is = null then
         {
-        "nil".
+        null.
         }
     else then
         {
@@ -130,13 +130,13 @@ declare find as function(e, t)
 
 declare findMin as function(t)
     {
-    if t is = "nil" then
+    if t is = null then
         {
-        "nil".
+        null.
         }
     else then
         {
-        if evaluate left(t) is = "nil" then
+        if evaluate left(t) is = null then
             {
             t.
             }
@@ -149,13 +149,13 @@ declare findMin as function(t)
 
 declare findMax as function(t)
     {
-    if t is = "nil" then
+    if t is = null then
         {
-        "nil".
+        null.
         }
     else then
         {
-        if evaluate right(t) is = "nil" then
+        if evaluate right(t) is = null then
             {
             t.
             }
@@ -212,9 +212,9 @@ declare doubleRotateWithRight as function(k1)
 
 declare insert as function(e, v, t)
     {
-    if t is = "nil" then
+    if t is = null then
         {
-        change t to_be evaluate newNode(e, "nil", "nil", 0, v).
+        change t to_be evaluate newNode(e, null, null, 0, v).
         }
     else then
         {
@@ -258,7 +258,7 @@ declare insert as function(e, v, t)
 
 declare getBalance as function(t)
     {
-    if t is = "nil" then
+    if t is = null then
         {
         0.
         }
@@ -270,7 +270,7 @@ declare getBalance as function(t)
 
 declare delete as function(t, k)
     {
-    if t is = "nil" then
+    if t is = null then
         {
         t.
         }
@@ -288,10 +288,10 @@ declare delete as function(t, k)
                 }
             else then
                 {
-                if evaluate left(t) is = "nil" or evaluate right(t) is = "nil" then
+                if evaluate left(t) is = null or evaluate right(t) is = null then
                     {
-                    declare temp as "nil".
-                    if evaluate left(t) is = "nil" then
+                    declare temp as null.
+                    if evaluate left(t) is = null then
                         {
                         change temp to_be evaluate right(t).
                         }
@@ -299,10 +299,10 @@ declare delete as function(t, k)
                         {
                         change temp to_be evaluate left(t).
                         }.
-                    if temp is = "nil" then
+                    if temp is = null then
                         {
                         change temp to_be t.
-                        change t to_be "nil".
+                        change t to_be null.
                         }
                     else then
                         {
@@ -317,7 +317,7 @@ declare delete as function(t, k)
                     }.
                 }.
             }.
-        if t is = "nil" then
+        if t is = null then
             {
             t.
             }
@@ -360,7 +360,7 @@ declare delete as function(t, k)
 
 declare displayAVL as function(t)
     {
-    if t is = "nil" then
+    if t is = null then
         {
         0.
         }
@@ -368,7 +368,7 @@ declare displayAVL as function(t)
         {
         display "Val: ".
         display evaluate data(t).
-        if evaluate left(t) is = "nil" then
+        if evaluate left(t) is = null then
             {
             0.
             }
@@ -377,7 +377,7 @@ declare displayAVL as function(t)
             display " Left: ".
             display evaluate data(evaluate left(t)).
             }.
-        if evaluate right(t) is = "nil" then
+        if evaluate right(t) is = null then
             {
             0.
             }
@@ -393,7 +393,7 @@ declare displayAVL as function(t)
     }.
 
 --Basic inserts
-declare someTree as evaluate insert(3, "c", "nil").
+declare someTree as evaluate insert(3, "c", null).
 displayln "****tree after insert k: 3, v: \"c\":".
 evaluate displayAVL(someTree).
 change someTree to_be evaluate insert(5, "e", someTree).
