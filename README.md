@@ -6,7 +6,7 @@ An example of a (very) basic interpreted language.
 
 idc executes `.idc` files by
 
-- **Lexing** the source code into identified lexemes like `INTEGER`, `STRING`, `OPAREN`, `NULL`, `IF`, `NEXT`, `PRINTDONE`, etc
+- **Lexing** the source code into identified lexemes like `INTEGER`, `STRING`, `OPAREN`, `NULL`, `IF`, `NEXT`, etc
 
 - **Parsing** the list of lexemes into a parse tree which organizes units of meaning like functions, expressions, and conditionals
 
